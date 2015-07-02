@@ -1,0 +1,148 @@
+#head
+{
+     position:fixed;
+     top:0;
+     width:70%;
+     z-index:1;
+     padding-left:10%;
+}
+#foot
+{
+    position:relative;
+    margin-top:2ex;
+    left:3%;
+    width:61.8%;
+    height:2ex;
+    //border-radius:0.5ex;
+    //border:black solid;
+    padding-left:5%;
+    padding-right:5%;
+}
+#home
+{
+    position:fixed;
+    top:0%;
+    left:3%;
+    z-index:10;
+    padding-left:4%;
+}
+.tag
+{
+    border:solid 1px blue;
+    border-radius:5px;
+    background:#aad2f0;
+    display:inline;
+}
+.ds-thread,#content
+{
+    margin-top:5ex;
+    position:relative;
+    width:61.8%;
+    left:3%;
+    //border:1px solid;
+    border-radius:10px;
+    //background:#aad2f0;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}
+.posts {
+  list-style-type: none;
+}
+
+.category li.listing-seperator {
+  padding-bottom: 0px;
+}
+li.listing-seperator {
+  font-family: "telexregular", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 17px;
+  color: #4C4B4B;
+  padding-top: 20px;
+}
+.category li {
+  list-style-type: none;
+  margin: 0 0 0 35px;
+  line-height: 1.5;
+  font-size: 22px;
+}
+.posts li {
+  margin-bottom: 10px;
+}
+
+user agent stylesheetli {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+
+user agent stylesheetul, menu, dir {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}
+
+.category {
+  line-height: 1.4;
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 80px;
+}
+.wrap {
+  max-width: 830px;
+  margin: 0 auto;
+  zoom: 1;
+  text-align: left;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  //background:#f5f5d5;
+}
+blockquote {
+    padding: 1ex 1ex 1ex 1ex;
+    color: #777;
+    width:61.8%;
+    background:white;
+    border-left: 2ex solid #ddd;
+    border-radius:5px;
+}
+.highlight {
+    padding: 0 15px;
+    color: #777;
+    width:80%;
+    background:black;
+    border-left: 1ex solid #ddd;
+    border-radius:1ex;
+}
+
+.linenos
+{
+    position:relative;
+    left:-1ex;
+    z-index:0;
+}
+
+pre >code
+{
+    position:relative;
+    top:0;
+}
+
+h1.page-title
+{
+    position:relative;
+    text-align:center;
+    left:3%;
+    width:70%;
+}
+
+li.listing-seperator:before {
+    color: #ccc;
+}

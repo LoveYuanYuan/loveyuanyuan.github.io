@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+　　<title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/ref/pygments.css">
+    <script src="/ref/jquery-2.1.3.min.js"></script>
+    <link href="/ref/main.css" rel="stylesheet">
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+      </script>
+</head>
+<body>
+    <a id='home' href="http://zhangjg.github.io">
+        <img border="0" src="/ref/home.png" >
+    </a>
+    <div id="head">
+    {% for tag in page.tags %}
+        <div class="tag"><a href="/#{{tag}}">{{tag}}</a></div>
+    {% endfor %}
+    </div>
+    <h1 class="page-title">{{page.title}}</h1>
+    <div id="content">
+        {{ content }}
+    </div>
+    <!-- 多说评论框 start -->
+    {% if page.tags.size != 0 %}  
+	<div class="ds-thread" data-thread-key="{{page.url}}" data-title="{{page.title}}" data-url="{{page.url}}"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zhangjg"};
+	    (function() {
+		    var ds = document.createElement('script');
+		    ds.type = 'text/javascript';ds.async = true;
+		    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		    ds.charset = 'UTF-8';
+		   (document.getElementsByTagName('head')[0] 
+		    || document.getElementsByTagName('body')[0]).appendChild(ds);
+	    })();
+	</script>
+	{%endif%}
+    <div id="foot">
+    {% if page.tags.size == 0 %}   
+    返回<a href="/">主页</a>!
+    {% else %}
+        {% for tag in page.tags %}
+            {% if forloop.first %}
+        查看更多的关于
+            {% endif %}
+        <a href="/#{{tag}}">{{tag}}</a>
+            {% if forloop.last %}
+        的内容.
+            {% else %}
+        ,
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </div>
+    <script>
+       var t=$("pre>code");
+       for(var i=0;i<t.length;i++) {
+           var lines=$(t[i]).html().split("\n").length-1;
+           var code="<div class=\"linenos\"><pre><code class=\"javascript\" data-lang=\"javascript\">";
+           for(var j=0;j<lines;)
+           {
+                if(++j == lines)
+                {
+                    code+=j+"</code></pre></div>";
+                }else{
+                    code+=j+"\n";
+                }
+           }
+           var table="<table><tr>";
+           table+="<td>"+code+"</td>";
+           table+="<td><pre>"+t[i].outerHTML+"</pre></td>"
+           table+="</tr></table>";
+           var p=$(t[i]).parent().parent();
+           p.empty();
+           p.append(table);
+       }
+    </script>
+  </body>
+</html>
