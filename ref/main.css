@@ -45,6 +45,14 @@
     //padding-left:5%;
     //padding-right:5%;
 }
+h1.page-title
+{
+    position:relative;
+    text-align:center;
+    left:10%;
+    width:80%;
+}
+
 
 .post ul, .post ol {
   margin-left: 1.35em;
@@ -135,13 +143,6 @@ pre >code
     top:0;
 }
 
-h1.page-title
-{
-    position:relative;
-    text-align:center;
-    left:3%;
-    width:70%;
-}
 
 li.listing-seperator:before {
     color: #ccc;
